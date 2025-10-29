@@ -1,0 +1,10 @@
+Componentes de post
+anidados uno dentro de otro
+
+Single File Component
+
+Botton sfc se anida en Card 
+y Card se anida en Container 
+
+de esta forma podemos anidar componentes dentro de otros
+cada uno independiente y con sus propios estilos y funcionalidades
