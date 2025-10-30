@@ -1,3 +1,63 @@
+<template>
+  <h1>Form</h1>
+  <section class="content">
+    <h3>Add Teacher</h3>
+    <div class="forma">
+      <label for="name">Name</label>
+      <input type="text" v-model="teacher.name" id="name" placeholder="Your name...">
+      <label for="surname">Surname</label>
+      <input type="text" v-model="teacher.surname" id="surname" placeholder="Your surname...">
+      <label for="dni">DNI / NIF</label>
+      <input type="text" v-model="teacher.dni" id="dni" placeholder="Your number of identification...">
+      <label for="subject">Subjects</label>
+      <input type="text" v-model="subject" id="subject" placeholder="your diferent subjects...">
+      <button class="btn-subject" @click="addSubject">Add subject</button>
+      <ul>
+        <li v-for="(item, index) in teacher.subjects" :key="index">
+          {{ item }}
+        </li>
+      </ul>
+      <input type="checkbox" v-model="teacher.doc"> <span class="doc">Documentation delivered</span>
+      <button class="btn-teacher" @click="addTeacher">Add teacher</button>
+    </div>
+  </section>
+
+  <section class="content">
+    <h3>List Teachers</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>DNI</th>
+          <th>Subjects</th>
+          <th>Documentation</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(item, index) in teachers" :key="item.dni">
+          <td>{{ item.name }}</td>
+          <td>{{ item.surname }}</td>
+          <td>{{ item.dni }}</td>
+          <td>
+            <ul>
+              <li v-for="(e, i) in item.subjects" :key="i">{{ e }}</li>
+            </ul>
+          </td>
+          <td>
+            <span v-if="item.doc">Delivered</span>
+            <span v-else>Not delivered</span>
+          </td>
+          <td>
+            <button class="btn-delete" @click="deleteTeacher(index)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</template>
+
 <script setup lang="ts">
 import { type Ref, ref } from "vue";
 
@@ -45,63 +105,12 @@ const cleanTeacher = () => {
   teacher.value.subjects = [];
   teacher.value.doc = false;
 };
+
+const deleteTeacher = (index: number) => {
+  // Elimina 1 elemento en el índice dado.
+  teachers.value.splice(index, 1)
+}
 </script>
-
-<template>
-  <h1>Form</h1>
-  <section class="content">
-    <h3>Add Teacher</h3>
-    <div class="forma">
-      <label for="name">Name</label>
-      <input type="text" v-model="teacher.name" id="name" placeholder="Your name...">
-      <label for="surname">Surname</label>
-      <input type="text" v-model="teacher.surname" id="surname" placeholder="Your surname...">
-      <label for="dni">DNI / NIF</label>
-      <input type="text" v-model="teacher.dni" id="dni" placeholder="Your number of identification...">
-      <label for="subject">Subjects</label>
-      <input type="text" v-model="subject" id="subject" placeholder="your diferent subjects...">
-      <button class="btn-subject" @click="addSubject">Add subject</button>
-      <ul>
-        <li v-for="(item, index) in teacher.subjects" :key="index">
-          {{ item }}
-        </li>
-      </ul>
-      <input type="checkbox" v-model="teacher.doc"> <span class="doc">Documentation delivered</span>
-      <button class="btn-teacher" @click="addTeacher">Add teacher</button>
-    </div>
-  </section>
-
-  <section class="content">
-    <h3>List Teachers</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Surname</th>
-          <th>DNI</th>
-          <th>Subjects</th>
-          <th>Documentation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in teachers" :key="item.dni">
-          <td>{{ item.name }}</td>
-          <td>{{ item.surname }}</td>
-          <td>{{ item.dni }}</td>
-          <td>
-            <ul>
-              <li v-for="(e, i) in item.subjects" :key="i">{{ e }}</li>
-            </ul>
-          </td>
-          <td>
-            <span v-if="item.doc">Delivered</span>
-            <span v-else>Not delivered</span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-</template>
 
 <style scoped>
 .content {
@@ -177,6 +186,22 @@ input[type=checkbox] {
 
 .btn-subject:hover {
   background-color: dodgerblue;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.btn-delete:hover {
+  background-color: red;
 }
 
 ul li {
