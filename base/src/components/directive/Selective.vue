@@ -1,3 +1,18 @@
+<template>
+  <div>
+    <h1>VUE Directives</h1>
+
+    <h2 v-if="age > 21">You are of legal age</h2>
+    <h2 v-else>You are minor ok...</h2>
+  </div>
+  <hr>
+  <div>
+    <h2>Current day is number {{ today() }}</h2>
+    <h2>Today is {{ week[today()] }}</h2>
+    <h2 v-show="week[1] == 'Monday'">monday is the second day</h2>
+  </div>
+</template>
+
 <script setup lang="ts">
 
 const age: number = 21
@@ -23,21 +38,6 @@ const today = (): number => {
 //
 // v-show = usa display: 
 </script>
-
-<template>
-  <div>
-    <h1>VUE Directives</h1>
-
-    <h2 v-if="age > 21">You are of legal age</h2>
-    <h2 v-else>You are minor ok...</h2>
-  </div>
-  <hr>
-  <div>
-    <h2>Current day is number {{ today() }}</h2>
-    <h2>Today is {{ week[today()] }}</h2>
-    <h2 v-show="week[1] == 'Monday'">monday is the second day</h2>
-  </div>
-</template>
 
 <style scoped>
 h1 {

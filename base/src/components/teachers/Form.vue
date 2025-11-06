@@ -13,9 +13,7 @@
       <input type="text" v-model="subject" id="subject" placeholder="your diferent subjects...">
       <button class="btn-subject" @click="addSubject">Add subject</button>
       <ul>
-        <li v-for="(item, index) in teacher.subjects" :key="index">
-          {{ item }}
-        </li>
+        <li v-for="(item, index) in teacher.subjects" :key="index">{{ item }}</li>
       </ul>
       <input type="checkbox" v-model="teacher.doc"> <span class="doc">Documentation delivered</span>
       <button class="btn-teacher" @click="addTeacher">Add teacher</button>
@@ -198,10 +196,6 @@ input[type=checkbox] {
   cursor: pointer;
   width: 100%;
   font-size: 0.9em;
-}
-
-.btn-delete:hover {
-  background-color: red;
 }
 
 ul li {

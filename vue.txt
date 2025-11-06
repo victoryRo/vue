@@ -1,48 +1,47 @@
-TUTORIAL EN VIDEO
-VUE 3 PROFESSIONAL
+TUTORIAL EN VIDEO VUE 3 PROFESSIONAL
     - Episodio 1:
-        - Fundamentos: completed
+        - Fundamentos:
     - Episodio 2:
-        - Componentes: completed 
+        - Componentes:
     - Episodio 3:
-        - directivas: completed 
+        - directivas:
     - Episodio 4:
-        - Formularios completed
+        - Formularios
     - Episodio 5:
-        - Comunicacion vertical entre componentes y ciclo de vida: completed
+        - Comunicacion vertical entre componentes y ciclo de vida:
     - Episodio 6:
-        - Datos computados: completed
+        - Datos computados: ...
     - Episodio 7:
-        - Directivas personalizadas: completed
+        - Directivas personalizadas:
     - Episodio 8:
-        - Servicios: completed
+        - Servicios:
     - Episodio 9:
-        - Estilos: completed 
+        - Estilos:
     - Episodio 10:
-        - Rutas: completed
+        - Rutas:
     - Episodio 11:
        - Enrutado con servicios: 25 min
 
-
+// -----------------------------
 
 TUTORIAL VUE PAGINA OFICIAL
     Getting Started:
-        - Introduction
-        - Quick Start 
+        - Introduction (ok)
+        - Quick Start  (ok) 
     Essentials:
-        - Creating an application
-        - Template Syntax
-        - Reactivity Fundamentals
-        - Computed Properties ...
-        - Class and Style Bindings
-        - Conditional Rendering 
-        - List Rendering 
-        - Event Handling 
+        - Creating an application  (ok)
+        - Template Syntax          (ok)
+        - Reactivity Fundamentals  (ok)
+        - Computed Properties      (ok)
+        - Class and Style Bindings (ok)
+        - Conditional Rendering    (ok)
+        - List Rendering           (ok)
+        - Event Handling ...
         - Form Input Bindings
         - Watchers
         - Template Ref
         - Conponents Basics 
-        - Lifecycle Hooks
+        - Lifecycle Hooks          (ok)
 
 
 // -----------------------------

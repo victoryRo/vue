@@ -1,3 +1,23 @@
+<template>
+  <h2>List of countries</h2>
+  <div class="content">
+    <ul>
+      <li v-for="(c, index) in Countries" :key="index">
+        <span class="elem">{{ c }}</span>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <h2>Languages</h2>
+  <div class="content">
+    <ul>
+      <template v-for="leng in Languages" :key="leng.code">
+        <li class="elem">{{ leng.name }}</li>
+      </template>
+    </ul>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { type Ref, ref } from 'vue'
 
@@ -31,26 +51,6 @@ const Languages: Ref<Array<ILenguage>> = ref([
 
 // v-bind:key  podemos abreviarla con :key
 </script>
-
-<template>
-  <h2>List of countries</h2>
-  <div class="content">
-    <ul>
-      <li v-for="(c, index) in Countries" :key="index">
-        <span class="elem">{{ c }}</span>
-      </li>
-    </ul>
-  </div>
-  <br>
-  <h2>Languages</h2>
-  <div class="content">
-    <ul>
-      <li v-for="leng in Languages" :key="leng.code">
-        <span class="elem">{{ leng.name }}</span>
-      </li>
-    </ul>
-  </div>
-</template>
 
 <style scoped>
 h2 {
