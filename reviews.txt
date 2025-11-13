@@ -1,4 +1,5 @@
 TUTORIAL EN VIDEO VUE 3 PROFESSIONAL
+
     - Episodio 1:
         - Fundamentos:
     - Episodio 2:
@@ -10,11 +11,11 @@ TUTORIAL EN VIDEO VUE 3 PROFESSIONAL
     - Episodio 5:
         - Comunicacion vertical entre componentes y ciclo de vida:
     - Episodio 6:
-        - Datos computados: ...
+        - Datos computados:
     - Episodio 7:
         - Directivas personalizadas:
     - Episodio 8:
-        - Servicios:
+        - Servicios: ...
     - Episodio 9:
         - Estilos:
     - Episodio 10:
@@ -25,6 +26,7 @@ TUTORIAL EN VIDEO VUE 3 PROFESSIONAL
 // -----------------------------
 
 TUTORIAL VUE PAGINA OFICIAL
+
     Getting Started:
         - Introduction (ok)
         - Quick Start  (ok) 
@@ -45,3 +47,25 @@ TUTORIAL VUE PAGINA OFICIAL
 
 
 // -----------------------------
+
+TUTORIAL W3SCHOOL CSS
+
+    - CSS Margins ...
+    - CSS Margin collapse
+    - CSS Padding
+    - CSS Height and Width 
+    - CSS Box Model 
+    - CSS Outline
+    - CSS Text
+      - text-transformation
+    - CSS Fonts
+    - CSS Icons 
+    - Links
+    - Lists
+    - Tables
+    - Display
+
+// -----------------------------
+
+
+
